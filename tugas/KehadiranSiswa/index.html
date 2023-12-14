@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nilai Pelajaran</title>
+    <style>
+        form {
+            margin-bottom:  50px;
+        }
+        td,th {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Nilai Pelajaran</h1>
+    <table>
+        <tr>
+            <th>Mata Pelajaran</th>
+            <th></th>
+            <th>Nilai</th>
+        </tr>
+        <tr>
+            <td>Nilai Matematika</td>
+            <td>:</td>
+            <td><input type="number" id="nilai-matematika" /></td>
+        </tr>
+        <tr>
+            <td>Nilai Bahasa Indonesia</td>
+            <td>:</td>
+            <td><input type="number" id="nilai-bahasa-indonesia" /></td>
+        </tr>
+        <tr>
+            <td>Nilai Bahasa Inggris</td>
+            <td>:</td>
+            <td><input type="number" id="nilai-bahasa-inggris" /></td>
+        </tr>
+        <tr>
+            <td colspan="3"><button onclick="hitungRataRata()">Hitung Rata-Rata</button></td>
+        </tr>
+        <tr>
+            <td>Rata - rata</td>
+            <td>:</td>
+            <td><input type="text" id="rata-rata" readonly /></td>
+        </tr>
+        <tr>
+            <td>Predikat</td>
+            <td>:</td>
+            <td><input type="text" id="predikat" readonly /></td>
+        </tr>
+    </table>
+
+
+<h1>Kehadiran siswa</h1>
+<form action="">
+    <table>
+        <tr>
+            <td>NIS</td>
+            <td>:</td>
+            <td><input type="number" id="nis" min="12300000"></td>
+        </tr>
+        <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td><input type="text" id="nama"></td>
+        </tr>
+        <tr>
+            <td>Kehadiran</td>
+            <td>:</td>
+            <td><input type="checkbox" id="kehadiran"> <label for="kehadiran" id="keterangan">Tidak Hadir</label></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="button" value="Submit" id="submit"></td>
+        </tr>
+    </table>
+</form>
+
+<table id="table">
+    <tr>
+        <th>NIS</th>
+        <th>Nama</th>
+        <th>Kehadiran</th>
+    </tr>
+</table>
+    <script src="index.js"></script>
+</body>
+
+</html>

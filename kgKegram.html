@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let kg = 4.2;
+        console.log(kg + "kg = " + kg*1000 + "gram")
+
+        let jam = 5;
+        console.log(jam + "jam = " + jam*60 + "menit")
+        console.log(jam*3600)
+
+        let jabatan = "direktur";
+        let anak = 2;
+
+        if (jabatan == "CEO" || jabatan == "direktur"){
+            if (anak == 1){
+                console.log("tunjangan anak = 2jt")
+            }else if (anak == 2){
+                console.log('tunjangan anak = 3jt')
+            }else{
+                console.log('tidak ada tunjangan')
+            }
+        }else if (jabatan == "Sekretaris"){
+            if (anak == 1) {
+                console.log("tunjangan anak = 1jt")
+            } else if (anak == 2) {
+                console.log('tunjangan anak = 1,5jt')
+            } else {
+                console.log('tidak ada tunjangan')
+            }
+        }else{
+            console.log('tidak ada tunjangan anak')
+        }
+    </script>
+</body>
+</html>

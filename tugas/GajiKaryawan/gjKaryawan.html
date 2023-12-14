@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="run()">Jalankan</button>
+    <script>
+        function run (){
+            let anak = confirm("Punya anak?\nok = Punya, batal = Tidak Punya");
+            let jmlhAnak = anak ? prompt("berapa?") : 0;
+            alert("data berhasil diinput, Lihat console untuk melihat hasil")
+            let tunjangan = 500000;//500 ribu
+            let gajiPokok = 1500000//1.5 juta
+            let pajak = 5 / 100;
+            let bpjs = 3 / 100;
+
+
+            if (anak == true && jmlhAnak > 0 && jmlhAnak <= 2) {
+                tunjangan += jmlhAnak * 100000;
+                let gajiKotor = gajiPokok + tunjangan;
+                let potongan = gajiKotor * (pajak + bpjs);
+                let gajiBersih = gajiKotor - potongan;
+
+                console.log(`jika memiliki anak ${jmlhAnak}, maka tunjangannya adalah ${tunjangan}`);
+                console.log(`dan gaji kotornya sebesar ${gajiKotor}`);
+                console.log(`dikenakan potongan pajak sebesar ${pajak} dan BPJS sebesar ${bpjs} jadi dikenakan potongan sebesar ${potongan}`);
+                console.log(`dan gaji bersihnya sebesar ${gajiBersih}`);
+
+            } else if (anak == false || jmlhAnak == 0) {
+                let gajiKotor = gajiPokok + tunjangan;
+                let potongan = gajiKotor * (pajak + bpjs);
+                let gajiBersih = gajiKotor - potongan;
+
+                console.log(`jika tidak memiliki anak, maka tunjangannya adalah ${tunjangan}`);
+                console.log(`dan gaji kotornya sebesar ${gajiKotor}`);
+                console.log(`dikenakan potongan pajak sebesar ${pajak} dan BPJS sebesar ${bpjs} jadi dikenakan potongan sebesar ${potongan}`);
+                console.log(`dan gaji bersihnya sebesar ${gajiBersih}`);
+            } else {
+                console.log("tidak ada tunjangan");
+            }
+        }
+    </script>
+</body>
+</html>
