@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let barang1 = prompt("masukkan harga barang pertama");
+        let barang2 = prompt("masukkan harga barang kedua");
+        let barang3 = prompt("masukkan harga barang ketiga");
+
+        let total = parseInt(barang1) + parseInt(barang2) + parseInt(barang3);
+        if (total > 100000) {
+            potongan = total * (10 / 100);
+            harga = total - potongan;
+            console.log(`anda mendapatkan potongan sebesar ${potongan} dan harga yang harus dibayar adalah ${harga}`);
+        } else {
+            console.log(`harga yang harus dibayar adalah ${total}`);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1-50</p>
+    <button onclick="satuSampai50()">run</button>
+    <p>50-1</p>
+    <button onclick="limaPuluhSampai1()">run</button>
+    <script>
+        function satuSampai50(){
+            // Cetak angka 1 - 50
+            console.log("Menggunakan for loop (1 - 50):");
+            document.write("Menggunakan for loop (1 - 50): </br>");
+            for (let i = 1; i <= 50; i++) {
+                console.log(i);
+                document.write(i + '</br>')
+            }
+            
+            // Cetak angka 1 - 50
+            console.log("Menggunakan while loop (1 - 50):");
+            document.write("Menggunakan for loop (1 - 50): </br>");
+            let j = 1;
+            while (j <= 50) {
+                console.log(j);
+                document.write(j + '</br>')
+                j++;
+            }
+            
+            // Cetak angka 1 - 50
+            console.log("Menggunakan do-while loop (1 - 50):");
+            document.write("Menggunakan for loop (1 - 50): </br>");
+            let x = 1;
+            do {
+                console.log(x);
+                document.write(x + '</br>')
+                x++;
+            } while (x <= 50);
+            
+        }
+        
+        function limaPuluhSampai1(){
+            // Cetak angka 50 - 1
+            console.log("Menggunakan for loop (50 - 1):");
+            document.write("Menggunakan for loop (1 - 50): </br>");
+            for (let i = 50; i >= 1; i--) {
+                console.log(i);
+                document.write(i + '</br>')
+            }
+            
+            // Cetak angka 50 - 1
+            console.log("Menggunakan while loop (50 - 1):");
+            document.write("Menggunakan for loop (1 - 50): </br>");
+            let k = 50;
+            while (k >= 1) {
+                console.log(k);
+                document.write(k + '</br>')
+                k--;
+            }
+            
+            // Cetak angka 50 - 1
+            console.log("Menggunakan do-while loop (50 - 1):");
+            document.write("Menggunakan for loop (1 - 50): </br>");
+            let y = 50;
+            do {
+                console.log(y);
+                document.write(y + '</br>')
+                y--;
+            } while (y >= 1);
+        }
+        </script>
+</body>
+</html>

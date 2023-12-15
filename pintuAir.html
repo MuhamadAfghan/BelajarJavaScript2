@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let tinggiAir = 700;
+
+        if (tinggiAir <= 500.0) {
+            console.log("aman")
+        } else if (tinggiAir >= 500.1 && tinggiAir <= 600.0) {
+            console.log("WASPADA")
+        } else if (tinggiAir >= 600.1 && tinggiAir <= 650.0) {
+            console.log("SIAGA 2")
+        } else if (tinggiAir > 650) {
+            console.log("SIAGA 1")
+        } else {
+            console.log("tidak diketahui")
+        }
+    </script>
+</body>
+
+</html>
