@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Keuntungan tiap kelas:</h3>
+    <ul>
+        <li>Keuntungan kelas VIP adalah Rp.<span id="keuntunganVIP"></span></li>
+        <li>Keuntungan kelas Eksekutif adalah Rp.<span id="keuntunganEksekutif"></span></li>
+        <li>Keuntungan kelas Ekonomi adalah Rp.<span id="keuntunganEkonomi"></span></li>
+    </ul>
+    <h3>total keuntungan</h3>
+    <ul>
+        <li>Keuntungan dari semua kelas adalah Rp.<span id="totalKeuntungan"></span></li>
+    </ul>
+    <h3>jumlah tiket perkelas</h3>
+    <ul>
+        <li>Jumlah tiker yang terjual kelas VIP sebanyak <span id="tiketVIP"></span> tiket</li>
+        <li>Jumlah tiker yang terjual kelas Eksekutif sebanyak <span id="tiketEksekutif"></span> tiket</li>
+        <li>Jumlah tiker yang terjual kelas Ekonomi sebanyak <span id="tiketEkonomi"></span> tiket</li>
+    </ul>
+    <h3>Jumlah tiket terjual seluruh kelas</h3>
+    <ul>
+        <li>Jumlah tiket terjual seluruh kelas sebanyak <span id="totalTiket"></span></li>
+    </ul>
+
+    <script>
+        //preparetion
+        let totalKeuntungan = 0;
+        let totalTiketTerjual;
+        //input
+        const tiketTerjualVIP = parseInt(prompt("Jumlah tiket VIP terjual: "));
+        const tiketTerjualEksekutif = parseInt(prompt("Jumlah tiket Eksekutif terjual: "));
+        const tiketTerjualEkonomi = parseInt(prompt("Jumlah tiket Ekonomi terjual: "));
+        const hargaTiketVIP = 30000;
+        const hargaTiketEksekutif = 25000;
+        const hargaTiketEkonomi = 20000;
+
+        
+        //Menentukan persentase keuntungan kelas VIP
+        if(tiketTerjualVIP >= 35){
+            totalKeuntunganVIP = 0.25;
+        }else if(tiketTerjualVIP >= 20){
+            totalKeuntunganVIP = 0.15;
+        }else{
+            totalKeuntunganVIP = 0.05;
+        }
+        //menentukan total keuntungan kelas VIP lalu dicetak ke console
+        const keuntunganVIP = (hargaTiketVIP * tiketTerjualVIP)  * totalKeuntunganVIP;
+        totalKeuntungan += keuntunganVIP
+        console.log(`Keuntungan kelas VIP adalah Rp.${keuntunganVIP}`);
+
+
+        //Menentukan persentase keuntungan kelas Eksekutif
+        if(tiketTerjualEksekutif >= 40){
+            totalKeuntunganEksekutif = 0.20;
+        }else if(tiketTerjualEksekutif >= 20){
+            totalKeuntunganEksekutif = 0.10;
+        }else{
+            totalKeuntunganEksekutif = 0.02;
+        }
+        //menentukan total keuntungan kelas Eksekutif lalu dicetak ke console
+        const keuntunganEksekutif = (hargaTiketEksekutif * tiketTerjualEksekutif)  * totalKeuntunganEksekutif;
+        totalKeuntungan += keuntunganEksekutif
+        console.log(`Keuntungan kelas Eksekutif adalah Rp.${keuntunganEksekutif}`);
+
+
+        //Menentukan persentase keuntungan kelas Ekonomi
+        totalKeuntunganEkonomi = 0.07;
+        //menentukan total keuntungan kelas Ekonomi lalu dicetak ke console
+        const keuntunganEkonomi = (hargaTiketEkonomi * tiketTerjualEkonomi)  * totalKeuntunganEkonomi;
+        totalKeuntungan += keuntunganEkonomi
+        console.log(`Keuntungan kelas Ekonomi adalah Rp.${keuntunganEkonomi}`);
+
+
+        //Menampilkan total keuntungan dari semua kelas
+        console.log(`Total keuntungan dari kelas VIP,Eksekutif dan Ekonomi adalah Rp.${totalKeuntungan}`)
+        //Menampilkan jumlah tiket perkelas yang terjual
+        console.log(`Jumlah tiket VIP yang terjual adalah ${tiketTerjualVIP} tiket`)
+        console.log(`Jumlah tiket VIP yang terjual adalah ${tiketTerjualEksekutif} tiket`)
+        console.log(`Jumlah tiket VIP yang terjual adalah ${tiketTerjualEkonomi} tiket`)
+        //Menampilkan total tiket yang terjual dari seluruh kelas
+        totalTiketTerjual = tiketTerjualVIP + tiketTerjualEksekutif + tiketTerjualEkonomi;
+        console.log(`Jumlah Tiket Seluruh kelas yang terjual sebanyak ${totalTiketTerjual} tiket`)
+
+        //memunculkan ke web
+        document.querySelector('#keuntunganVIP').innerText = keuntunganVIP
+        document.querySelector('#keuntunganEksekutif').innerText = keuntunganEksekutif
+        document.querySelector('#keuntunganEkonomi').innerText = keuntunganEkonomi
+
+        document.querySelector('#totalKeuntungan').innerText = totalKeuntungan
+
+        document.querySelector('#tiketVIP').innerText = tiketTerjualVIP
+        document.querySelector('#tiketEksekutif').innerText = tiketTerjualEksekutif
+        document.querySelector('#tiketEkonomi').innerText = tiketTerjualEkonomi
+
+        document.querySelector('#totalTiket').innerText = totalTiketTerjual
+        </script>
+</body>
+</html>
