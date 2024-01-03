@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 != 0) {
+                console.log(`${i} adalah angka ganjil`)
+            }else{
+                console.log(`${i} adalah angka genap`)
+            }
+        }
+        console.log('====================================================')
+        let a = 1;
+        while (a <= 10) {
+            if (a % 2 != 0) {
+                console.log(`${a} adalah angka ganjil`)
+            }else{
+                console.log(`${a} adalah angka genap`)
+            }
+            a++ 
+        }
+        console.log('====================================================')
+        let x = 1;
+        do {
+            if (x % 2 != 0) {
+                console.log(`${x} adalah angka ganjil`)
+            } else {
+                console.log(`${x} adalah angka genap`)
+            }
+            x++;
+        } while (x <= 10)
+
+        //test menggunakan promt
+        (function () {
+                const n = parseInt(prompt('Cek angka genap sampai \ncontoh : 20'));
+                if (!n) {
+                    alert('Masukkan angka / cek console untuk melihat hasil lainnya')
+                } else {
+                    for (let i = 1; i <= n; i++) {
+                        if (i % 2 != 0) {
+                            alert(`${i} adalah angka ganjil`)
+                        } else {
+                            alert(`${i} adalah angka genap`)
+                        }
+                    }
+                }
+            })()
+    </script>
+</body>
+
+</html>

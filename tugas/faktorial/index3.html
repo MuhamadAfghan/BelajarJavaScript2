@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const n = 5;
+        let faktorial = 1;
+        for (let i = 1; i <= n; i++) {
+            faktorial *= i;
+            console.log(faktorial)
+        }
+
+        console.log('===============================')
+
+        let i = 1
+        faktorial = 1;
+        while (i <= n) {
+            faktorial *= i;
+            console.log(faktorial)
+            i++
+        }
+
+        console.log('===============================')
+
+        let x = 1
+        faktorial1 = 1;
+        do {
+            faktorial1 *= x;
+            console.log(faktorial1)
+            x++
+        } while (x <= n)
+
+        //test pakai promt
+        (function () {
+            const n = parseInt(prompt('Masukkan angka faktorial'));
+            if(!n){
+                alert('Masukkan angka / cek console untuk melihat hasil lainnya')
+            }else{
+                let faktorial = 1;
+                for (let i = 1; i <= n; i++) {
+                    faktorial *= i;
+                    alert(`${faktorial / i} * ${i} = ${faktorial}`)
+                }
+            }
+        }) ()
+    </script>
+</body>
+
+</html>

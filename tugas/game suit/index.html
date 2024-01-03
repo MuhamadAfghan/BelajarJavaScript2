@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        lagi = true;
+        while(lagi){
+            //player memilih
+            const plyr = prompt("Pilihan : batu, gunting, kertas");
+
+            //computer memilih
+            let comp = Math.random();
+            if (comp < 0.34) {
+                comp = "kertas";
+            } else if (comp >= 0.34 && comp < 0.67) {
+                comp = "batu";
+            } else {
+                comp = "gunting";
+            }
+
+            //mencari pemenang
+            let hasil = '';
+            if (plyr === comp) {
+                hasil = "Seri";
+            } else if (plyr === "kertas") {
+                hasil = (comp === "gunting") ? "Kalah" : "Menang";
+            } else if (plyr === "gunting") {
+                hasil = (comp === "batu") ? "Kalah" : "Menang";
+            } else if (plyr === "batu") {
+                hasil = (comp === "kertas") ? "Kalah" : "Menang";
+            } else {
+                hasi = alert("Masukkan pilihan yang benar!");
+            }
+
+            //menampilkan hasil
+            alert(`PLAYER : ${plyr}\nCOMPUTER : ${comp}\nHasil : ${hasil}`);
+            lagi = confirm("Ingin bermain lagi?");
+        }
+
+        alert("Terima kasih sudah bermain");
+    </script>
+</body>
+</html>

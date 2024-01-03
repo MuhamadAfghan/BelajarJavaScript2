@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (let tahun = 1600; tahun <= 2024; tahun++) {
+            if ((tahun % 400 == 0) || (tahun % 400 != 0 && tahun % 4 == 0)) {
+                console.log(`${tahun} tahun kabisat`)
+            } else {
+                console.log(`${tahun} bukan tahun kabisat`)
+            }
+        }
+
+        //test menggunakan promt
+        let tahun = parseInt(prompt('Masukkan tahun untuk dicek : \ncontoh : 2024'))
+        if(!tahun){
+            alert('Masukkan angka / cek console untuk melihat hasil lainnya')
+        }else{
+            if ((tahun % 400 == 0) || (tahun % 400 != 0 && tahun % 4 == 0)) {
+                alert(`${tahun} tahun kabisat`)
+            } else {
+                alert(`${tahun} bukan tahun kabisat`)
+            }
+        }
+    </script>
+</body>
+
+</html>

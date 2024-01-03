@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            console.log("*".repeat(i));
+            document.write("*".repeat(i) + "</br>")
+        }
+
+        let tinggiSegitiga = 5;
+
+        for (let i = 1; i <= tinggiSegitiga; i++) {
+            // Membuat spasi untuk menjaga bentuk segitiga
+            let spasi = " ".repeat(tinggiSegitiga - i);
+
+            // Membuat bintang untuk setiap baris
+            let bintang = "*".repeat(2 * i - 1);
+
+            // Menggabungkan spasi dan bintang, lalu mencetak hasilnya
+            console.log(spasi + bintang);
+            document.write(spasi + bintang + "<br>");
+        }
+        tinggiSegitiga = 5;
+
+        for (let i = tinggiSegitiga; i >= 1; i--) {
+            // Membuat spasi untuk menjaga bentuk segitiga
+            let spasi = " ".repeat(tinggiSegitiga - i);
+
+            // Membuat bintang untuk setiap baris
+            let bintang = "*".repeat(2 * i - 1);
+
+            // Menggabungkan spasi dan bintang, lalu mencetak hasilnya
+            console.log(spasi + bintang);
+            document.write(spasi + bintang + "<br>");
+        }
+
+
+    </script>
+</body>
+
+</html>
